@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "transcriptions#new"
+  get "/transcribe", to: "transcriptions#new"
+  post "transcriptions", to: "transcriptions#create"
+  get "/summary/:id", to: "transcriptions#summary"
 end

@@ -1,0 +1,13 @@
+<h1>Voice Transcription & Summarization</h1>
+
+<div data-controller="transcribe">
+  <button data-action="click->transcribe#start" id="startBtn">Start Listening</button>
+  <button data-action="click->transcribe#stop" id="stopBtn" disabled>Stop Listening</button>
+
+  <div id="liveTranscript" style="margin-top:1em; border:1px solid #ccc; padding:1em; height:150px; overflow:auto;">
+    <em>Live transcription will appear here…</em>
+  </div>
+
+  <div id="finalTranscript" style="margin-top:1em;"></div>
+  <div id="summary" style="margin-top:1em; font-weight:bold;"></div>
+</div>
