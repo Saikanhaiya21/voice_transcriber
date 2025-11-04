@@ -1,24 +1,53 @@
-# README
+# Voice Transcription & Summarization Web App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+This Rails 7 web application allows users to:
 
-* Ruby version
+- Record voice directly from the browser.
+- Display **real-time transcription** while speaking.
+- Show **full transcription** after stopping.
+- Generate a **summary** of the conversation using a simple built-in summarization method (no external API use).
 
-* System dependencies
+The app uses the **browser's SpeechRecognition API**, StimulusJS for frontend interactions, and Rails for backend storage and summarization.
 
-* Configuration
+---
 
-* Database creation
+## Features
 
-* Database initialization
+- Real-time voice transcription in the browser.
+- Continuous speech handling (pauses do not erase previous content).
+- Summarization of full conversation.
+- Frontend built with StimulusJS, no heavy frameworks required.
+- Backend built in Rails 7.
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## Prerequisites
 
-* Deployment instructions
+- Ruby 3.1+  
+- Rails 7+   
+- SQLite3 (or other DB supported by Rails)  
 
-* ...
+---
+
+## Setup
+
+**Clone the repository:**
+```bash
+git clone https://github.com/Saikanhaiya21/voice_transcriber.git
+cd voice_transcriber
+```
+**Install dependencies:**
+```bash
+bundle install
+```
+**Set up the database:**
+```bash
+rails db:create db:migrate
+```
+
+**Start Server:**
+```bash
+rails server
+```
